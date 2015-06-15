@@ -14,5 +14,10 @@ printf "${BYellow} installing brew ${NC}"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 printf "${BYellow} updating brew ${NC}"
 brew update
-
-
+#install GIT tool
+printf "${BYellow} installing git ${NC}"
+brew install git
+printf "${BYellow} installing git-flow ${NC}"
+brew install git-flow
+printf "${BYellow} updating sourcetree ${NC}"
+brew cask install sourcetree
