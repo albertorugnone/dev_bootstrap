@@ -21,3 +21,9 @@ printf "${BYellow} installing git-flow ${NC}"
 brew install git-flow
 printf "${BYellow} updating sourcetree ${NC}"
 brew cask install sourcetree
+
+#node and frontend development
+printf "${BBlue} install node ${NC}"
+brew install node
+printf "${BBlue} install bower globally ${NC}"
+npm install -g bower
