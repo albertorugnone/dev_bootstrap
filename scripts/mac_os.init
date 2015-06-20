@@ -33,7 +33,9 @@ printf "${BBlue} install bower globally ${NC}"
 npm install -g bower
 
 #installing eclipse-id
-printf "${BBlue} install elipse ide ${NC}"
-brew cask install eclipse-ide
+#printf "${BBlue} install elipse ide ${NC}"
+#brew cask install eclipse-ide
+printf "${BBlue} install elipse jee ${NC}"
+brew cask install eclipse-jee
 printf "${BBlue} install java ide ${NC}"
 brew cask install java
