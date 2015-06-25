@@ -19,6 +19,10 @@ printf "${BYellow} installing git ${NC}"
 brew install git
 printf "${BYellow} installing git-flow ${NC}"
 brew install git-flow
+printf "${BYellow} installing brew cask ${NC}"
+brew install caskroom/cask/brew-cask
+printf "${BYellow} brew tap caskroom/versions ${NC}"
+brew tap caskroom/versions
 printf "${BYellow} updating sourcetree ${NC}"
 brew cask install sourcetree
 
@@ -27,3 +31,9 @@ printf "${BBlue} install node ${NC}"
 brew install node
 printf "${BBlue} install bower globally ${NC}"
 npm install -g bower
+
+#installing eclipse-id
+printf "${BBlue} install elipse ide ${NC}"
+brew cask install eclipse-ide
+printf "${BBlue} install java ide ${NC}"
+brew cask install java
