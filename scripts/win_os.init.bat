@@ -4,3 +4,5 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object n
 choco install sourcetree -y
 "installing intellijidea-ultimate" >
 choco install intellijidea-ultimate -y
+"installing sonar-runner" >
+choco install sonar-runner -y
