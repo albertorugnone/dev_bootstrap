@@ -39,3 +39,6 @@ printf "${BBlue} install elipse jee ${NC}"
 brew cask install eclipse-jee
 printf "${BBlue} install java ide ${NC}"
 brew cask install java
+printf "${BBlue} -----  internet explorer -----${NC}"
+printf "${BBlue} install xquartz  ${NC}"
+brew cask install xquartz
