@@ -19,6 +19,13 @@ The script will install the following package
 
 
 #Windows OS
+The script wil install the following packages:
+-chocolatly
+
+-git
+-git-flow
+-sourcetree
+
 
 ##Vagrant machines
 The project provide a Vagrantfile configuring two windows machines.
@@ -27,6 +34,11 @@ The experiment machine is used only during development of windows scripts (Yes, 
 ###How to connect to experimental server via rdp
 vagrant rdp experimental
 
-- **Important Note**
+- **Mac OS Users take RDP Updated**
 Remember to update RDP at the last version if you have Mac OS, otherwise you will be troubled by *Remote-Desktop-Connection-cannot-verify-non-sense* messages
 
+##Git Flow Installation Workaround
+After installing git flow it doesn't work properly. For example if you run git flow init in a folder you will have a message indicating libiconv2 is missing
+To workaround this problem run the following commands (*note*, they can depends by your windows version):
+
+- <code>copy "C:\Program Files (x86)\Git\bin\libiconv-2.dll" "C:\Program Files (x86)\Git\libexec\git-core\libiconv2.dll"</code>
