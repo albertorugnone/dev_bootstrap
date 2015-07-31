@@ -5,7 +5,8 @@
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
-Vagrant.configure(2) do |config|
+VAGRANT_API_VERSIONS = "2"
+Vagrant.configure(VAGRANT_API_VERSIONS) do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
@@ -13,6 +14,21 @@ Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "kensykora/windows_2012_r2_standard"
+  
+  config.vm.define :original do |original_config|
+    original_config.vm.hostname = "original"
+    original_config.vm.network :private_network,:ip => "192.168.33.10"
+    original_config.vm.communicator = "winrm"
+  end
+
+  config.vm.define :experimental do |experimental_config|
+    experimental_config.vm.hostname = "experimental"
+    experimental_config.vm.network :private_network,:ip => "192.168.33.12"
+    experimental_config.vm.communicator = "winrm"
+    experimental_config.vm.provision "shell", inline: <<-SHELL
+      @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%systemdrive%\chocolatey\bin 
+    SHELL
+  end
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -64,8 +80,4 @@ Vagrant.configure(2) do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.communicator = "winrm"
-  config.vm.provision "shell", inline: <<-SHELL
-    @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%systemdrive%\chocolatey\bin
-  SHELL
 end
