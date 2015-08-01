@@ -44,4 +44,7 @@ To workaround this problem run the following commands (*note*, they can depends 
 - <code>copy "C:\Program Files (x86)\Git\bin\libiconv-2.dll" "C:\Program Files (x86)\Git\libexec\git-core\libiconv2.dll"</code>
 
 ##SourceTree Notes
-Now that I am editing chocolatey installs SourceTree 1.6.14  version (see [Choco web page for SourceTree](https://chocolatey.org/packages/SourceTree)). This is not the last version and probably in the time there will be often a more new version. Then at the first running, likely, you will be asked to update SourceTree version.
+Now that I am editing, chocolatey installs SourceTree 1.6.14  version (see [Choco web page for SourceTree](https://chocolatey.org/packages/SourceTree)). This is not the last version and probably in the time there will be often a more new version. Then at the first running, likely, you will be asked to update SourceTree version.
+
+##Eclipse
+The script installs eclipse but it work only if you run it as Administrator
