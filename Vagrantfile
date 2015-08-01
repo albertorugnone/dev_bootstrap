@@ -15,16 +15,16 @@ Vagrant.configure(VAGRANT_API_VERSIONS) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "kensykora/windows_2012_r2_standard"
   
-  config.vm.define :original do |original_config|
+  config.vm.define :original, autostart: false do |original_config|
+    original_config.vm.communicator = "winrm"
     original_config.vm.hostname = "original"
     original_config.vm.network :private_network,:ip => "192.168.33.10"
-    original_config.vm.communicator = "winrm"
   end
 
-  config.vm.define :experimental do |experimental_config|
+  config.vm.define :experimental, primary: true do |experimental_config|
+    experimental_config.vm.communicator = "winrm"
     experimental_config.vm.hostname = "experimental"
     experimental_config.vm.network :private_network,:ip => "192.168.33.12"
-    experimental_config.vm.communicator = "winrm"
     experimental_config.vm.provision "shell", inline: <<-SHELL
       @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%systemdrive%\chocolatey\bin 
     SHELL
