@@ -21,3 +21,6 @@ choco install sourcetree -y
 echo %scriptName%  installing intellijidea-ultimate
 
 choco install intellijidea-ultimate -y
+
+choco install eclipse-jee
+
