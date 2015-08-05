@@ -22,5 +22,7 @@ echo %scriptName%  installing intellijidea-ultimate
 
 choco install intellijidea-ultimate -y
 
-choco install eclipse-jee
+echo %scriptName%  installing eclipse 4.5
+
+choco install eclipse
 
