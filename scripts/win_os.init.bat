@@ -24,5 +24,5 @@ choco install intellijidea-ultimate -y
 
 echo %scriptName%  installing eclipse 4.5
 
-choco install eclipse
+choco install eclipse -y
 
