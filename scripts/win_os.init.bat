@@ -18,6 +18,10 @@ echo %scriptName%  installing sourcetree
 
 choco install sourcetree -y
 
+echo %scriptName%  jdk 
+
+choco install jdk8
+
 echo %scriptName%  installing intellijidea-ultimate
 
 choco install intellijidea-ultimate -y
