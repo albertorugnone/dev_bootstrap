@@ -1,0 +1,17 @@
+/opt/homebrew-cask/Caskroom/eclipse-jee/4.5/Eclipse.app/Contents/MacOS/eclipse \
+-clean -purgeHistory \
+-application org.eclipse.equinox.p2.director \
+-noSplash \
+-repository http://moreunit.sourceforge.net/update-site/ \
+-installIUs org.moreunit,\
+org.moreunit.core,\
+org.moreunit.feature.group,\
+org.moreunit.feature.jar,\
+org.moreunit.light.feature.group,\
+org.moreunit.light.feature.jar,\
+org.moreunit.mock,\
+org.moreunit.mock.feature.group,\
+org.moreunit.mock.feature.jar,\
+org.moreunit.mock.source,\
+org.moreunit.source \
+-vmargs -Declipse.p2.mirrors=true -Djava.net.preferIPv4Stack=true -Dequinox.scr.waitTimeOnBlock=10000 -Dequinox.ds.perf=true
