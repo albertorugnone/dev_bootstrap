@@ -3,8 +3,10 @@
 -application org.eclipse.equinox.p2.director \
 -noSplash \
 -repository http://downloads.sonarsource.com/eclipse/eclipse/ \
--repository https://github.com/erlide/erlide/ \
--repository http://download.eclipse.org/tools/cdt/releases/8.7
+-repository http://download.erlide.org/update/ \
+-repository http://download.eclipse.org/tools/cdt/releases/8.7 \
+-repository http://download.eclipse.org/releases/mars/ \
+-repository http://pydev.org/updates/ \
 -installIUs \
 a.jre.javase,\
 com.google.guava,\
