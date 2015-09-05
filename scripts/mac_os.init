@@ -37,5 +37,7 @@ npm install -g bower
 #brew cask install eclipse-ide
 printf "${BBlue} install elipse jee ${NC}"
 brew cask install eclipse-jee
-printf "${BBlue} install java ide ${NC}"
+printf "${BBlue} install java ${NC}"
 brew cask install java
+printf "${BBlue} install intellij ${NC}"
+brew cask search intellij
