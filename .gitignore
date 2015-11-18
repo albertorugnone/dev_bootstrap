@@ -1,3 +1,5 @@
 .DS_Store
 .vagrant/
 environment.sublime-workspace
+.idea
+dev_bootstrap.iml

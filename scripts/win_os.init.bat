@@ -21,3 +21,11 @@ choco install sourcetree -y
 echo %scriptName%  installing intellijidea-ultimate
 
 choco install intellijidea-ultimate -y
+
+#echo %scriptName%  installing nircmd
+#choco instlal nircmd -y
+
+echo %scriptName%  installing conemu
+
+choco install conemu -y
+
