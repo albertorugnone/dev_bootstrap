@@ -41,3 +41,5 @@ printf "${BBlue} install java ${NC}"
 brew cask install java
 printf "${BBlue} install intellij ${NC}"
 brew cask search intellij
+printf "${BBlue} install android-studio ${NC}"
+brew cask install android-studio
